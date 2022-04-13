@@ -158,8 +158,8 @@ install Composer & NodeJs
    ```
 4. Default login credentials (database\factories\UserFactory.php)
    ```sh
-   email: 
-   default '123456'
+   email: admin@example.com
+   password: 12345
    ```
 
 <!-- CONTRIBUTING -->
