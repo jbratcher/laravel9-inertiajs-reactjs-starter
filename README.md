@@ -1,13 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -22,39 +13,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/laravel-logo.png" alt="Logo" width="90" height="90">
-  </a>
-  <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/inertiajs-logo.png" alt="Logo" width="90" height="90">
-  </a>
-  <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/reactjs-logo.png" alt="Logo" width="90" height="90">
-  </a>
-
-<h3 align="center">Laravel Inertia ReactJs Starter</h3>
-
+  <h1 align="center">Laravel Inertia ReactJs Starter</h1>
   <p align="center">
     This is a starter code to start the project, which already includes multiple layout admin templates with login for authentication
-    <br />
-    <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">View Demo</a>
-    ·
-    <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/issues">Request Feature</a>
-  </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -67,7 +33,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#screenshoot">Screenshoot</a></li>
+    <li><a href="#screenshoot">Screenshot</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -89,12 +55,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/agungksidik/laravel9-inertiajs-reactjs-starter/master/images/screenshoot1.png" />
-</p>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Built With
 
 * [Laravel 9](https://laravel.com)
@@ -103,8 +63,6 @@
 * [Inertia](https://inertiajs.com/)
 * [Argon Dashboard 2](https://www.creative-tim.com/product/argon-dashboard)
 * [Laravel Socialite](https://github.com/laravel/socialite)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Screenshoot
 
@@ -115,8 +73,6 @@
 | Dashboard | Manage User | Profile Page |
 | --- | --- | --- |
 | [![Dashboard](https://raw.githubusercontent.com/agungksidik/public-assets/master/laravel9-inertiajs-reactjs-starter/dashboard_page.png)](#) | [![Manage User](https://raw.githubusercontent.com/agungksidik/public-assets/master/laravel9-inertiajs-reactjs-starter/manage_user.png)](#) | [![Profile Page](https://raw.githubusercontent.com/agungksidik/public-assets/master/laravel9-inertiajs-reactjs-starter/profile_page.png)](#) |
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -134,8 +90,6 @@
 
 See the [open issues](https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -152,7 +106,7 @@ install Composer & NodeJs
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter.git
+   git clone https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter.git
    ```
 2. Install dependency Laravel
    ```sh
@@ -163,7 +117,13 @@ install Composer & NodeJs
    npm install
    npm run dev
    ```
-4. Create table corresponds to .env
+4. Run `php artisan key:generate`
+
+5. Copy `.env.example` to `.env`
+    ```sh
+    cp .env.example .env
+    ```
+5. Add your database table information
     ```js    
     DB_DATABASE=yourdatabase_name
     DB_USERNAME=your_username
@@ -173,15 +133,12 @@ install Composer & NodeJs
    ```sh
    php artisan migrate --seed
    ```
-6. Google Sign In (Insert to your .env)
+6. Add your Google Oauth credentials | [Guide](https://developers.google.com/identity/protocols/oauth2)
    ```sh
     GOOGLE_CLIENT_ID='your_client_id'
     GOOGLE_CLIENT_SECRET='your_client_secret'
     GOOGLE_REDIRECT='your_callback_url'
    ```
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -199,14 +156,11 @@ install Composer & NodeJs
    ```sh
    npm run hot
    ```
-4. Default password
+4. Default login credentials (database\factories\UserFactory.php)
    ```sh
-   setup in UserFactory
+   email: 
    default '123456'
    ```
-   
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -222,49 +176,25 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Agung Sidik Muhamad - [@agungksidik](https://twitter.com/agungksidik) - agungksidik@gmail.com
-
-Project Link: [https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter](https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+This project is an extention of the work of [agungksidik]("https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[contributors-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[forks-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/network/members
-[stars-shield]: https://img.shields.io/github/stars/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[stars-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[issues-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/issues
-[license-shield]: https://img.shields.io/github/license/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[license-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/agung-sidik-muhamad-5b427620b/
-[product-screenshot]: https://raw.githubusercontent.com/agungksidik/laravel9-inertiajs-reactjs-starter/master/images/screenshoot1.png
+[contributors-shield]: https://img.shields.io/github/contributors/jbratcher/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
+[contributors-url]: https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jbratcher/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
+[forks-url]: https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter/network/members
+[stars-shield]: https://img.shields.io/github/stars/jbratcher/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
+[stars-url]: https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jbratcher/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
+[issues-url]: https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter/issues
+[license-shield]: https://img.shields.io/github/license/jbratcher/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
+[license-url]: https://github.com/jbratcher/laravel9-inertiajs-reactjs-starter/blob/master/LICENSE.txt
