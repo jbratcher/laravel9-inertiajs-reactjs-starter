@@ -23,8 +23,8 @@ export default function Navbar({props, pageName}) {
                             ?
                             <li className="nav-item pe-3 d-flex align-items-center">
                                 <ul className="nav-link text-white" href="#" role="button" aria-expanded="false">
-                                    <img src="/img/team-2.jpg" className="avatar avatar-sm  me-3 " />
-                                    {auth.user.name}
+                                    <img src="/img/team-2.jpg" className="avatar avatar-sm  me-3" />
+                                    {auth.user.username}
                                 </ul>
                             </li>
                             : 

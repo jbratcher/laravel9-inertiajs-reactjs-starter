@@ -17,7 +17,6 @@ class RegisterController extends Controller
 
     public function store(Request $request) {
         $validated = $request->validate([
-            'name' => ['required'],
             'username' => ['required'],
             'email' => ['required','unique:users'],
             'password' => ['required'],
@@ -30,12 +29,12 @@ class RegisterController extends Controller
     
             return redirect('/dashboard')->with([
                 'type' => 'success',
-                'message' => 'You are logged in.'
+                'message' => $this->log_in_success_message
             ]);
         }
 
         throw ValidationException::withMessages([
-            'email' => 'The provide credentials does not match our record.',
+            'email' => $this->log_in_failure_message,
         ]);
     }
 }

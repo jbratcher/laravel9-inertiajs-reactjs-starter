@@ -11,6 +11,10 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
+
+    public string $first_name;
+    public string $last_name;
+
     /**
      * Define the model's default state.
      *
@@ -18,8 +22,12 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $this->first_name = $this->faker->firstName();
+        $this->last_name = $this->faker->lastName();
+
         return [
-            'name' => $this->faker->name(),
+            'first_name' => $this->first_name,
+            'last_name' =>  $this->last_name,
             'username' => $this->faker->unique()->username(),
             'email' => $this->faker->unique()->safeEmail(),
             'address' => $this->faker->address(),

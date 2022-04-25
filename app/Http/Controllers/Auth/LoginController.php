@@ -23,12 +23,12 @@ class LoginController extends Controller
             session()->regenerate();
             return redirect('/dashboard')->with([
                 'type' => 'success',
-                'message' => 'You are logged in.'
+                'message' => $this->log_in_success_message
             ]);
         }
 
         throw ValidationException::withMessages([
-            'email' => 'The provide credentials does not match our record.',
+            'email' => $this->log_in_failure_message,
         ]);
     }
 
@@ -36,7 +36,7 @@ class LoginController extends Controller
         Auth::logout();
 
         return redirect('/login')->with([
-            'type' => 'success', 'message' => 'You are now logout.',
+            'type' => 'success', 'message' => $this->log_out_success_message,
         ]);
     }
 }

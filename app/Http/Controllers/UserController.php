@@ -51,4 +51,5 @@ class UserController extends Controller
             'message' => 'User has been deleted',
         ]);
     }
+
 }

@@ -18,8 +18,7 @@
 <br />
 <div align="center">
   <h1 align="center">Laravel Inertia ReactJs Starter</h1>
-  <p align="center">
-    This is a starter code to start the project, which already includes multiple layout admin templates with login for authentication
+  <p align="center">This is a starter template/project for an admin dashboard with built-in user authentication.</p>
 </div>
 
 

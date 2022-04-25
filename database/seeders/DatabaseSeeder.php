@@ -22,10 +22,12 @@ class DatabaseSeeder extends Seeder
     {
         // create a default user first
         DB::table('users')->insert([
-            'name' => 'admin',
+            'first_name' => 'ad',
+            'last_name' => 'min',
             'username' => 'admin',
             'email' => 'admin@example.com',
             'password' => Hash::make('12345'),
+            'address' => '123 Main Street, Anytown, USA',
             'email_verified_at' => now(),
             'remember_token' => Str::random(10),
         ]);
